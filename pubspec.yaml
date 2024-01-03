@@ -1,0 +1,73 @@
+name: diario_obra
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  font_awesome_flutter: ^10.5.0
+  flutter_svg: ^2.0.7
+  firebase_core: ^2.15.1
+  firebase_auth: ^4.9.0
+  google_sign_in: ^6.1.5
+  shared_preferences: ^2.2.1
+  flutter_slide_drawer: ^1.0.3
+  image_picker: ^1.0.4
+  image: ^4.1.3 
+  firebase_storage: ^11.2.7
+  provider: ^6.0.5
+  flutter_switch: ^0.3.2
+  intl: ^0.18.1
+  url_launcher: ^6.1.14
+  mailer: ^6.0.1 
+  pdf: ^3.10.4
+  printing: ^5.11.0 
+  http: ^1.1.0
+  path_provider: ^2.1.1
+  open_file: ^3.3.2
+  simple_search_dropdown: ^3.0.0
+  multi_select_flutter: ^4.1.3
+  share_plus: ^7.2.1
+  double_back_to_close_app: ^2.1.0 
+  file_picker: ^6.0.0 
+  shimmer: ^3.0.0
+  lottie: ^2.7.0 
+  flutter_staggered_animations: ^1.1.1
+  page_animation_transition: ^1.0.0 
+  brain_fusion: ^0.1.1
+  google_fonts: ^6.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/supervisao.png
+    - assets/images/vita_placa.png
+    - assets/images/vita.png
+    - assets/images/for_the.png 
+    - assets/images/not_found.json
+    - assets/images/default_profile.png
+    - assets/pdf_images/pen.png 
+    - assets/pdf_images/sun.png
+    - assets/pdf_images/water.png 
+    - assets/pdf_images/rain.png
+    - assets/pdf_images/footer.png
+
+  fonts:
+    - family: YuseiMagic
+      fonts:
+        - asset: assets/fonts/YuseiMagic-Regular.ttf
+    # - family: Emoji
+    #   fonts:
+    #     - asset: assets/fonts/NotoColorEmoji.ttf 

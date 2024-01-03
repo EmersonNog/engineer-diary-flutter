@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "197334825694",
+    "project_id": "diario-obra-1958a",
+    "storage_bucket": "diario-obra-1958a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:197334825694:android:263c760dfaa2944185204f",
+        "android_client_info": {
+          "package_name": "com.example.diario_obra"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ37rpQ6tmkqFH_lzwozsYn_fRe2pe8Sk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
