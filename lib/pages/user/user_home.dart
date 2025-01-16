@@ -163,6 +163,7 @@ class _UserHomeState extends State<UserHome> {
             child: const Center(
                 child: FaIcon(
               FontAwesomeIcons.barsStaggered,
+              color: Colors.white,
             )),
           ),
           actions: [
@@ -222,7 +223,7 @@ class _UserHomeState extends State<UserHome> {
                   ],
                 ),
                 FutureBuilder<Map<String, dynamic>>(
-                  future: getWeatherData(),
+                  future: getWeatherData(DateTime.now()),
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
                       return const Center(
@@ -323,11 +324,11 @@ class _UserHomeState extends State<UserHome> {
               ],
             ),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             Container(
                 width: MediaQuery.of(context).size.width * 0.8,
-                height: MediaQuery.of(context).size.height * 0.3,
+                height: MediaQuery.of(context).size.height * 0.28,
                 decoration: BoxDecoration(
                     color: const Color.fromARGB(255, 134, 133, 206),
                     boxShadow: const [
@@ -376,7 +377,7 @@ class _UserHomeState extends State<UserHome> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(20.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [

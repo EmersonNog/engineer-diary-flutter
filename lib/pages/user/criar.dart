@@ -327,7 +327,7 @@ class _CriarState extends State<Criar> {
     final pdf = pw.Document();
     final formattedDate = DateFormat('dd/MM/yyyy').format(selectedDate);
     final formattedDateSave = DateFormat('dd-MM-yyyy').format(selectedDate);
-    final weatherData = await getWeatherData();
+    final weatherData = await getWeatherData(selectedDate);
     final pen = pw.MemoryImage(
       (await rootBundle.load('assets/pdf_images/pen.png')).buffer.asUint8List(),
     );
@@ -1294,11 +1294,11 @@ class _CriarState extends State<Criar> {
                                     const Row(
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
-                                        Icon(Icons.date_range_rounded),
-                                        Text("  Selecione a data"),
+                                        Icon(Icons.date_range_rounded, color: Colors.white,),
+                                        Text("  Selecione a data", style: TextStyle(color: Colors.white),),
                                       ],
                                     ),
-                                    Text(formattedDate),
+                                    Text(formattedDate, style: TextStyle(color: Colors.white)),
                                   ],
                                 ),
                               ),
@@ -1307,7 +1307,7 @@ class _CriarState extends State<Criar> {
                               height: 15,
                             ),
                             FutureBuilder<Map<String, dynamic>>(
-                              future: getWeatherData(),
+                              future: getWeatherData(selectedDate),
                               builder: (context, snapshot) {
                                 if (snapshot.connectionState ==
                                     ConnectionState.waiting) {
@@ -1379,6 +1379,10 @@ class _CriarState extends State<Criar> {
                                       'CHUVOSO') {
                                     weatherIcon =
                                         FontAwesomeIcons.cloudShowersHeavy;
+                                  } else if (weatherData['weatherCondition'] ==
+                                      'NUVENS') {
+                                    weatherIcon =
+                                        FontAwesomeIcons.cloud;
                                   } else {
                                     weatherIcon = FontAwesomeIcons.cloudSun;
                                   }
